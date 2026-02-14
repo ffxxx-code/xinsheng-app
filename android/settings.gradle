@@ -1,0 +1,51 @@
+pluginManagement {
+    def flutterSdkPath = {
+        def properties = new Properties()
+        def localPropertiesFile = file("local.properties")
+        if (localPropertiesFile.exists()) {
+            localPropertiesFile.withInputStream { properties.load(it) }
+        }
+        def flutterSdkPath = properties.getProperty("flutter.sdk")
+        if (flutterSdkPath == null) {
+            // Try to find Flutter SDK from environment
+            flutterSdkPath = System.getenv("FLUTTER_ROOT")
+        }
+        if (flutterSdkPath == null) {
+            // Default path for Codemagic and common installations
+            def possiblePaths = [
+                "${System.getProperty('user.home')}/flutter",
+                "/opt/flutter",
+                "/usr/local/flutter",
+                "${System.getProperty('user.home')}/.flutter-sdk"
+            ]
+            for (path in possiblePaths) {
+                if (file(path).exists()) {
+                    flutterSdkPath = path
+                    break
+                }
+            }
+        }
+        if (flutterSdkPath == null) {
+            throw new GradleException("Flutter SDK not found. Please set FLUTTER_ROOT environment variable or create local.properties with flutter.sdk path.")
+        }
+        return flutterSdkPath
+    }()
+
+    includeBuild("$flutterSdkPath/packages/flutter_tools/gradle")
+
+    repositories {
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+    }
+}
+
+plugins {
+    id "dev.flutter.flutter-plugin-loader" version "1.0.0"
+    id "com.android.application" version "8.2.1" apply false
+    id "org.jetbrains.kotlin.android" version "1.9.22" apply false
+    id "com.google.gms.google-services" version "4.4.0" apply false
+    id "com.google.firebase.crashlytics" version "2.9.9" apply false
+}
+
+include ":app"

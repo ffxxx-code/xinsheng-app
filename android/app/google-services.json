@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "504967530478",
+    "project_id": "xinsheng-app",
+    "storage_bucket": "xinsheng-app.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:504967530478:android:6f3ac4da62392b276b70ff",
+        "android_client_info": {
+          "package_name": "com.xinsheng.xinsheng"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCtci-Q1x-jytAXZSt96dyBq7L5uf9oBkY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
