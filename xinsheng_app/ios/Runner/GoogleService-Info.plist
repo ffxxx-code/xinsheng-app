@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>API_KEY</key>
+	<string>AIzaSyAfVYYl8vMZlm_4dNF5IvSixn5mAtmvclI</string>
+	<key>GCM_SENDER_ID</key>
+	<string>504967530478</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.xinsheng.xinsheng</string>
+	<key>PROJECT_ID</key>
+	<string>xinsheng-app</string>
+	<key>STORAGE_BUCKET</key>
+	<string>xinsheng-app.firebasestorage.app</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:504967530478:ios:a14fc0f1816ee0816b70ff</string>
+</dict>
+</plist>
